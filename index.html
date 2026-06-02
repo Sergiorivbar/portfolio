@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sergio Rivera — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Barra de progreso de scroll -->
+  <div id="scroll-progress"></div>
+
+  <!-- Canvas partículas -->
+  <canvas id="particles"></canvas>
+
+  <!-- ══════════════ NAV ══════════════ -->
+  <nav id="navbar">
+    <div class="nav-logo">sergio<span>.dev</span></div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#educacion">Educación</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section id="hero">
+    <div class="grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <div class="dot"></div>
+          Disponible para nuevas oportunidades
+        </div>
+
+        <h1 class="hero-name">Sergio Rivera</h1>
+
+        <div class="hero-typed-wrap">
+          <span id="typed"></span><span class="cursor"></span>
+        </div>
+
+        <p class="hero-desc">
+          Desarrollador y técnico en sistemas y redes con experiencia real en entornos bancarios de alto nivel.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#contacto" class="btn btn-primary">
+            <i class="fas fa-envelope"></i> Contactar
+          </a>
+          <a href="#experiencia" class="btn btn-outline">
+            <i class="fas fa-briefcase"></i> Ver experiencia
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring">
+          <img src="foto.png" alt="Sergio Rivera" class="hero-photo" id="hero-img"
+               onerror="this.parentElement.classList.add('no-photo')" />
+          <div class="hero-photo-placeholder">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+        <div class="hero-photo-glow"></div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-mouse"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ══════════════ SOBRE MÍ ══════════════ -->
+  <div class="section-wrap" id="sobre-mi">
+    <div class="section-header reveal">
+      <span class="section-tag">// sobre mí</span>
+      <h2 class="section-title">¿Quién soy?</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          Soy <strong>desarrollador de aplicaciones multiplataforma</strong> y técnico en sistemas y redes,
+          con formación en <strong>DAM y SMR</strong>.
+        </p>
+        <p>
+          He adquirido experiencia real en entornos bancarios de alto nivel trabajando en el
+          <strong>equipo de Arquitectura de BNP Paribas</strong>, donde he manejado herramientas como
+          GIT, Bitbucket y SonarQube en proyectos Java mavenizados.
+        </p>
+        <p>
+          Busco incorporarme a un equipo técnico donde seguir creciendo y
+          <strong>aportar valor desde el primer día</strong>.
+        </p>
+        <div class="about-links">
+          <a href="mailto:riverabarrososergio@gmail.com" class="about-link">
+            <i class="fas fa-envelope"></i> riverabarrososergio@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/sergioriverabarroso" target="_blank" rel="noopener" class="about-link">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="about-stats reveal">
+        <div class="stat-card">
+          <div class="stat-number" data-target="4">0</div>
+          <div class="stat-suffix">+</div>
+          <div class="stat-label">Años de formación</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-suffix"></div>
+          <div class="stat-label">Prácticas profesionales</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="11">0</div>
+          <div class="stat-suffix">+</div>
+          <div class="stat-label">Tecnologías</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number stat-b2">B2</div>
+          <div class="stat-suffix"></div>
+          <div class="stat-label">Nivel de inglés</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ EXPERIENCIA ══════════════ -->
+  <div class="section-wrap" id="experiencia">
+    <div class="section-header reveal">
+      <span class="section-tag">// experiencia</span>
+      <h2 class="section-title">Experiencia Profesional</h2>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="tcard">
+          <div class="tcard-head">
+            <span class="tcard-company">BNP Paribas</span>
+            <span class="tcard-period">Prácticas 2º DAM</span>
+          </div>
+          <div class="tcard-role">Equipo de Arquitectura — Análisis y Soporte</div>
+          <p class="tcard-desc">
+            Segunda estancia integrado en el equipo de Arquitectura de BNP Paribas. Participé en análisis
+            y soporte sobre la arquitectura de aplicaciones corporativas, profundizando en el ciclo de vida
+            del software y los estándares tecnológicos del grupo bancario.
+          </p>
+          <div class="tags">
+            <span class="tag">Java</span>
+            <span class="tag">Maven</span>
+            <span class="tag">SonarQube</span>
+            <span class="tag">Bitbucket</span>
+            <span class="tag">Git</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="tcard">
+          <div class="tcard-head">
+            <span class="tcard-company">BNP Paribas</span>
+            <span class="tcard-period">Prácticas 1º DAM</span>
+          </div>
+          <div class="tcard-role">Equipo de Arquitectura — Primera Toma de Contacto</div>
+          <p class="tcard-desc">
+            Primera toma de contacto con el entorno profesional bancario dentro del equipo de Arquitectura.
+            Trabajé con GIT, Bitbucket y SonarQube en la gestión y control de calidad de proyectos
+            Java mavenizados.
+          </p>
+          <div class="tags">
+            <span class="tag">GIT</span>
+            <span class="tag">Bitbucket</span>
+            <span class="tag">SonarQube</span>
+            <span class="tag">Java</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="tcard">
+          <div class="tcard-head">
+            <span class="tcard-company">Abai Technologies</span>
+            <span class="tcard-period">Prácticas SMR</span>
+          </div>
+          <div class="tcard-role">Técnico en Sistemas y Redes</div>
+          <p class="tcard-desc">
+            Prácticas en un grupo empresarial de telecomunicaciones con clientes como Telefónica y BBVA.
+            Experiencia real en instalación, mantenimiento y soporte de infraestructuras de red y
+            sistemas informáticos.
+          </p>
+          <div class="tags">
+            <span class="tag">Redes</span>
+            <span class="tag">Sistemas</span>
+            <span class="tag">Soporte técnico</span>
+            <span class="tag">Telecomunicaciones</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="tcard">
+          <div class="tcard-head">
+            <span class="tcard-company">Clementes Team</span>
+            <span class="tcard-period">—</span>
+          </div>
+          <div class="tcard-role">Vigilante de Seguridad</div>
+          <p class="tcard-desc">
+            Desempeño de funciones de vigilancia y control de accesos, desarrollando responsabilidad,
+            atención al detalle y capacidad de gestión bajo presión en entornos de alta exigencia.
+          </p>
+          <div class="tags">
+            <span class="tag">Responsabilidad</span>
+            <span class="tag">Atención al detalle</span>
+            <span class="tag">Gestión bajo presión</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════ EDUCACIÓN ══════════════ -->
+  <div class="section-wrap" id="educacion">
+    <div class="section-header reveal">
+      <span class="section-tag">// educación</span>
+      <h2 class="section-title">Formación Académica</h2>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="tcard">
+          <div class="tcard-head">
+            <span class="tcard-company">La Inmaculada Padres Escolapios</span>
+            <span class="tcard-period">2024 — 2026</span>
+          </div>
+          <div class="tcard-role">DAM — Desarrollo de Aplicaciones Multiplataforma</div>
+          <p class="tcard-desc">
+            Ciclo formativo de grado superior orientado al desarrollo de aplicaciones multiplataforma,
+            abarcando Java, Spring Boot, bases de datos, desarrollo web con React y Angular,
+            y metodologías ágiles.
+          </p>
+          <div class="tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">React</span>
+            <span class="tag">Angular</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="tcard">
+          <div class="tcard-head">
+            <span class="tcard-company">La Inmaculada Padres Escolapios</span>
+            <span class="tcard-period">2022 — 2024</span>
+          </div>
+          <div class="tcard-role">SMR — Sistemas Microinformáticos y Redes</div>
+          <p class="tcard-desc">
+            Ciclo formativo de grado medio especializado en instalación, configuración y mantenimiento
+            de sistemas informáticos y redes de comunicaciones.
+          </p>
+          <div class="tags">
+            <span class="tag">Redes</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Windows Server</span>
+            <span class="tag">Hardware</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════ STACK ══════════════ -->
+  <div class="section-wrap" id="stack">
+    <div class="section-header reveal">
+      <span class="section-tag">// stack</span>
+      <h2 class="section-title">Tecnologías &amp; Herramientas</h2>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-card reveal" style="--delay: 0ms">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" class="skill-img" />
+        <div class="skill-name">Java</div>
+        <div class="skill-bar"><div class="skill-fill" style="--pct: 85%"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="--delay: 60ms">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" class="skill-img" />
+        <div class="skill-name">Python</div>
+        <div class="skill-bar"><div class="skill-fill" style="--pct: 70%"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="--delay: 120ms">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" class="skill-img" />
+        <div class="skill-name">React</div>
+        <div class="skill-bar"><div class="skill-fill" style="--pct: 75%"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="--delay: 180ms">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg" alt="Angular" class="skill-img" />
+        <div class="skill-name">Angular</div>
+        <div class="skill-bar"><div class="skill-fill" style="--pct: 70%"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="--delay: 240ms">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-img" />
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-bar"><div class="skill-fill" style="--pct: 78%"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="--delay: 300ms">
+        <div class="skill-img-dual">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" />
+        </div>
+        <div class="skill-name">HTML / CSS</div>
+        <div class="skill-bar"><div class="skill-fill" style="--pct: 82%"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="--delay: 360ms">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring Boot" class="skill-img" />
+        <div class="skill-name">Spring Boot</div>
+        <div class="skill-bar"><div class="skill-fill" style="--pct: 72%"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="--delay: 420ms">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="SQL" class="skill-img" />
+        <div class="skill-name">SQL</div>
+        <div class="skill-bar"><div class="skill-fill" style="--pct: 75%"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="--delay: 480ms">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" class="skill-img" />
+        <div class="skill-name">Git &amp; GitHub</div>
+        <div class="skill-bar"><div class="skill-fill" style="--pct: 88%"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="--delay: 540ms">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bitbucket/bitbucket-original.svg" alt="Bitbucket" class="skill-img" />
+        <div class="skill-name">Bitbucket</div>
+        <div class="skill-bar"><div class="skill-fill" style="--pct: 80%"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="--delay: 600ms">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="Jira" class="skill-img" />
+        <div class="skill-name">Jira</div>
+        <div class="skill-bar"><div class="skill-fill" style="--pct: 75%"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="--delay: 660ms">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt="Postman" class="skill-img" />
+        <div class="skill-name">Postman</div>
+        <div class="skill-bar"><div class="skill-fill" style="--pct: 78%"></div></div>
+      </div>
+
+    </div>
+
+    <!-- Habilidades blandas -->
+    <div class="soft-section">
+      <div class="section-header reveal" style="margin-bottom: 2rem;">
+        <span class="section-tag">// habilidades blandas</span>
+        <h3 class="soft-section-title">Habilidades Personales</h3>
+      </div>
+      <div class="soft-grid">
+        <div class="soft-item reveal"><i class="fas fa-users"></i> Trabajo en equipo</div>
+        <div class="soft-item reveal"><i class="fas fa-bolt"></i> Adaptación a entornos profesionales</div>
+        <div class="soft-item reveal"><i class="fas fa-brain"></i> Aprendizaje autónomo</div>
+        <div class="soft-item reveal"><i class="fas fa-car"></i> Carnet de conducir tipo B</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ IDIOMAS ══════════════ -->
+  <div class="section-wrap" id="idiomas">
+    <div class="section-header reveal">
+      <span class="section-tag">// idiomas</span>
+      <h2 class="section-title">Idiomas</h2>
+    </div>
+    <div class="lang-grid">
+      <div class="lang-card reveal">
+        <div class="lang-flag">🇪🇸</div>
+        <div class="lang-name">Español</div>
+        <div class="lang-level">Nativo · C2</div>
+        <div class="lang-bar"><div class="lang-fill"></div></div>
+        <div class="lang-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+      <div class="lang-card reveal">
+        <div class="lang-flag">🇬🇧</div>
+        <div class="lang-name">Inglés</div>
+        <div class="lang-level">B2 — Upper Intermediate</div>
+        <div class="lang-bar"><div class="lang-fill lang-fill--b2"></div></div>
+        <div class="lang-stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ CONTACTO ══════════════ -->
+  <div class="section-wrap" id="contacto">
+    <div class="section-header reveal">
+      <span class="section-tag">// contacto</span>
+      <h2 class="section-title">¿Hablamos?</h2>
+      <p class="section-sub">Estoy abierto a nuevas oportunidades. No dudes en contactarme.</p>
+    </div>
+    <div class="contact-grid">
+      <a href="mailto:riverabarrososergio@gmail.com" class="contact-card reveal" data-type="email">
+        <div class="contact-icon-wrap">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        </div>
+        <div class="contact-label">Email</div>
+        <div class="contact-value">riverabarrososergio<br>@gmail.com</div>
+        <span class="contact-cta">Enviar correo <i class="fas fa-arrow-right"></i></span>
+      </a>
+      <a href="tel:+34640710834" class="contact-card reveal" data-type="phone">
+        <div class="contact-icon-wrap">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+        </div>
+        <div class="contact-label">Teléfono</div>
+        <div class="contact-value">+34 640 710 834</div>
+        <span class="contact-cta">Llamar <i class="fas fa-arrow-right"></i></span>
+      </a>
+      <a href="https://www.linkedin.com/in/sergioriverabarroso" target="_blank" rel="noopener" class="contact-card reveal" data-type="linkedin">
+        <div class="contact-icon-wrap">
+          <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+        </div>
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-value">sergioriverabarroso</div>
+        <span class="contact-cta">Ver perfil <i class="fas fa-arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer>
+    <p>Diseñado &amp; construido por <span>Sergio Rivera</span> · <span>2026</span></p>
+    <p class="footer-stack">HTML · CSS · JavaScript</p>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <button id="back-to-top" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ══════════════ JS ══════════════ -->
+  <script>
+    /* ── Particles ── */
+    (function () {
+      const canvas = document.getElementById('particles');
+      const ctx = canvas.getContext('2d');
+      let W, H, dots = [];
+
+      function resize() {
+        W = canvas.width  = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', () => { resize(); init(); });
+
+      function randBetween(a, b) { return a + Math.random() * (b - a); }
+
+      function init() {
+        const count = Math.floor(W * H / 12000);
+        dots = Array.from({ length: count }, () => ({
+          x: randBetween(0, W), y: randBetween(0, H),
+          r: randBetween(0.8, 2.2),
+          vx: randBetween(-0.18, 0.18), vy: randBetween(-0.18, 0.18),
+          alpha: randBetween(0.2, 0.7)
+        }));
+      }
+      init();
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        dots.forEach(d => {
+          d.x += d.vx; d.y += d.vy;
+          if (d.x < 0) d.x = W; if (d.x > W) d.x = 0;
+          if (d.y < 0) d.y = H; if (d.y > H) d.y = 0;
+          ctx.beginPath();
+          ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(99,179,237,${d.alpha})`;
+          ctx.fill();
+        });
+        // connections
+        for (let i = 0; i < dots.length; i++) {
+          for (let j = i + 1; j < dots.length; j++) {
+            const dx = dots[i].x - dots[j].x, dy = dots[i].y - dots[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 120) {
+              ctx.beginPath();
+              ctx.moveTo(dots[i].x, dots[i].y);
+              ctx.lineTo(dots[j].x, dots[j].y);
+              ctx.strokeStyle = `rgba(99,179,237,${0.07 * (1 - dist / 120)})`;
+              ctx.lineWidth = 0.7;
+              ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(draw);
+      }
+      draw();
+    })();
+
+    /* ── Typing effect ── */
+    const phrases = [
+      'Desarrollador de Aplicaciones',
+      'Técnico en Sistemas y Redes',
+      'Backend Developer · Java & Spring',
+      'Frontend Developer · React & Angular',
+    ];
+    let pi = 0, ci = 0, deleting = false;
+    const typedEl = document.getElementById('typed');
+    function type() {
+      const cur = phrases[pi];
+      if (deleting) {
+        typedEl.textContent = cur.slice(0, ci--);
+        if (ci < 0) { deleting = false; pi = (pi + 1) % phrases.length; setTimeout(type, 450); return; }
+      } else {
+        typedEl.textContent = cur.slice(0, ci++);
+        if (ci > cur.length) { deleting = true; setTimeout(type, 2200); return; }
+      }
+      setTimeout(type, deleting ? 45 : 75);
+    }
+    type();
+
+    /* ── Scroll progress bar ── */
+    const progressBar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const pct = (scrollY / (document.documentElement.scrollHeight - innerHeight)) * 100;
+      progressBar.style.width = pct + '%';
+    });
+
+    /* ── Navbar scroll ── */
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
+
+    /* ── Hamburger ── */
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+    }));
+
+    /* ── Scroll reveal ── */
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => {
+        if (e.isIntersecting) {
+          const delay = e.target.style.getPropertyValue('--delay') || '0ms';
+          e.target.style.transitionDelay = delay;
+          e.target.classList.add('visible');
+        }
+      }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* ── Counter animation ── */
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        const target = parseInt(el.dataset.target);
+        if (isNaN(target)) return;
+        let current = 0;
+        const step = target / 40;
+        const interval = setInterval(() => {
+          current = Math.min(current + step, target);
+          el.textContent = Math.floor(current);
+          if (current >= target) clearInterval(interval);
+        }, 35);
+        counterObserver.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat-number[data-target]').forEach(el => counterObserver.observe(el));
+
+    /* ── Skill bar animation ── */
+    const skillObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('.skill-fill').forEach(bar => {
+            bar.style.width = bar.style.getPropertyValue('--pct') || '0%';
+          });
+          skillObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.skill-card').forEach(c => skillObserver.observe(c));
+
+    /* ── Back to top ── */
+    const btt = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => btt.classList.toggle('visible', scrollY > 400));
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+</body>
+</html>
