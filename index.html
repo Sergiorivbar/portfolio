@@ -13,8 +13,16 @@
   <!-- Barra de progreso de scroll -->
   <div id="scroll-progress"></div>
 
-  <!-- Canvas partículas -->
-  <canvas id="particles"></canvas>
+  <!-- Aurora background -->
+  <div id="aurora">
+    <div class="au-blob au-1"></div>
+    <div class="au-blob au-2"></div>
+    <div class="au-blob au-3"></div>
+    <div class="au-blob au-4"></div>
+    <div class="au-streak au-s1"></div>
+    <div class="au-streak au-s2"></div>
+    <div class="au-streak au-s3"></div>
+  </div></canvas>
 
   <!-- ══════════════ NAV ══════════════ -->
   <nav id="navbar">
@@ -24,6 +32,7 @@
       <li><a href="#experiencia">Experiencia</a></li>
       <li><a href="#educacion">Educación</a></li>
       <li><a href="#stack">Stack</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Menú">
@@ -376,6 +385,18 @@
         <div class="skill-bar"><div class="skill-fill" style="--pct: 78%"></div></div>
       </div>
 
+      <div class="skill-card reveal" style="--delay: 720ms">
+        <div class="skill-img" style="display:flex;align-items:center;justify-content:center;font-size:2.2rem">🤖</div>
+        <div class="skill-name">IA Generativa</div>
+        <div class="skill-bar"><div class="skill-fill" style="--pct: 85%"></div></div>
+      </div>
+
+      <div class="skill-card reveal" style="--delay: 780ms">
+        <div class="skill-img" style="display:flex;align-items:center;justify-content:center;font-size:2.2rem">✨</div>
+        <div class="skill-name">Vibe Coding</div>
+        <div class="skill-bar"><div class="skill-fill" style="--pct: 90%"></div></div>
+      </div>
+
     </div>
 
     <!-- Habilidades blandas -->
@@ -389,6 +410,8 @@
         <div class="soft-item reveal"><i class="fas fa-bolt"></i> Adaptación a entornos profesionales</div>
         <div class="soft-item reveal"><i class="fas fa-brain"></i> Aprendizaje autónomo</div>
         <div class="soft-item reveal"><i class="fas fa-car"></i> Carnet de conducir tipo B</div>
+        <div class="soft-item reveal"><i class="fas fa-robot"></i> IA generativa aplicada al desarrollo</div>
+        <div class="soft-item reveal"><i class="fas fa-wand-magic-sparkles"></i> Vibe Coding · GitHub Copilot · Cursor</div>
       </div>
     </div>
   </div>
@@ -401,26 +424,95 @@
     </div>
     <div class="lang-grid">
       <div class="lang-card reveal">
-        <div class="lang-flag">🇪🇸</div>
+        <div class="lang-flag">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" style="width:3.2rem;border-radius:4px;display:block">
+            <rect width="60" height="40" fill="#c60b1e"/>
+            <rect y="13" width="60" height="14" fill="#ffc400"/>
+          </svg>
+        </div>
         <div class="lang-name">Español</div>
         <div class="lang-level">Nativo · C2</div>
-        <div class="lang-bar"><div class="lang-fill"></div></div>
         <div class="lang-stars">
           <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
           <i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
       </div>
       <div class="lang-card reveal">
-        <div class="lang-flag">🇬🇧</div>
+        <div class="lang-flag">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" style="width:3.2rem;border-radius:4px;display:block">
+            <rect width="60" height="40" fill="#012169"/>
+            <path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="7"/>
+            <path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="4"/>
+            <path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="12"/>
+            <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="7"/>
+          </svg>
+        </div>
         <div class="lang-name">Inglés</div>
         <div class="lang-level">B2 — Upper Intermediate</div>
-        <div class="lang-bar"><div class="lang-fill lang-fill--b2"></div></div>
         <div class="lang-stars">
           <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
           <i class="fas fa-star"></i><i class="far fa-star"></i>
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- ══════════════ PROYECTOS ══════════════ -->
+  <div class="section-wrap" id="proyectos">
+    <div class="section-header reveal">
+      <span class="section-tag">// proyectos</span>
+      <h2 class="section-title">Proyectos</h2>
+      <p class="section-sub">Aplicaciones reales que he desarrollado desde cero.</p>
+    </div>
+
+    <!-- PokéLab -->
+    <article class="proj reveal">
+
+      <!-- Mockup izquierda -->
+      <div class="proj-mockup">
+        <div class="browser-chrome">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url"><i class="fas fa-lock" style="font-size:0.55rem;margin-right:4px;color:#28c840"></i>sergiorivbar.github.io/Pokelab</div>
+        </div>
+        <div class="browser-body">
+          <a href="https://sergiorivbar.github.io/Pokelab" target="_blank" rel="noopener" class="proj-preview-link">
+            <img src="img/pokelab/tfg1.JPG" alt="PokéLab - Inicio" class="proj-preview-img" />
+            <div class="proj-preview-overlay">
+              <span><i class="fas fa-external-link-alt"></i> Ver en vivo</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Info derecha -->
+      <div class="proj-info">
+        <div class="proj-badges">
+          <span class="proj-status"><i class="fas fa-circle"></i> En producción</span>
+          <span class="proj-year">2025 – 2026</span>
+        </div>
+        <h3 class="proj-title">PokéLab</h3>
+        <p class="proj-desc">Plataforma web completa sobre el universo Pokémon con Pokédex avanzada de 1307 especímenes, constructor de equipos, calculadora de daño, Pokédle diario, catálogo de películas y series, y chat con IA.</p>
+        <ul class="proj-list">
+          <li><i class="fas fa-circle-dot"></i> Pokédex · 1307 pokémon con filtros</li>
+          <li><i class="fas fa-circle-dot"></i> Constructor de equipos y sinergias</li>
+          <li><i class="fas fa-circle-dot"></i> Calculadora de daño precisa</li>
+          <li><i class="fas fa-circle-dot"></i> Pokédle diario al estilo Wordle</li>
+          <li><i class="fas fa-circle-dot"></i> Chat IA: Dr. Slowpoke</li>
+          <li><i class="fas fa-circle-dot"></i> Auth + multiidioma (ES/EN)</li>
+        </ul>
+        <div class="proj-tech">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" title="React" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" title="JavaScript" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" title="CSS3" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" title="HTML5" />
+        </div>
+        <div class="proj-links">
+          <a href="https://sergiorivbar.github.io/Pokelab" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Ver proyecto</a>
+          <a href="https://github.com/Sergiorivbar/Pokelab" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+    </article>
+
   </div>
 
   <!-- ══════════════ CONTACTO ══════════════ -->
@@ -471,69 +563,14 @@
 
   <!-- ══════════════ JS ══════════════ -->
   <script>
-    /* ── Particles ── */
-    (function () {
-      const canvas = document.getElementById('particles');
-      const ctx = canvas.getContext('2d');
-      let W, H, dots = [];
 
-      function resize() {
-        W = canvas.width  = window.innerWidth;
-        H = canvas.height = window.innerHeight;
-      }
-      resize();
-      window.addEventListener('resize', () => { resize(); init(); });
-
-      function randBetween(a, b) { return a + Math.random() * (b - a); }
-
-      function init() {
-        const count = Math.floor(W * H / 12000);
-        dots = Array.from({ length: count }, () => ({
-          x: randBetween(0, W), y: randBetween(0, H),
-          r: randBetween(0.8, 2.2),
-          vx: randBetween(-0.18, 0.18), vy: randBetween(-0.18, 0.18),
-          alpha: randBetween(0.2, 0.7)
-        }));
-      }
-      init();
-
-      function draw() {
-        ctx.clearRect(0, 0, W, H);
-        dots.forEach(d => {
-          d.x += d.vx; d.y += d.vy;
-          if (d.x < 0) d.x = W; if (d.x > W) d.x = 0;
-          if (d.y < 0) d.y = H; if (d.y > H) d.y = 0;
-          ctx.beginPath();
-          ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(99,179,237,${d.alpha})`;
-          ctx.fill();
-        });
-        // connections
-        for (let i = 0; i < dots.length; i++) {
-          for (let j = i + 1; j < dots.length; j++) {
-            const dx = dots[i].x - dots[j].x, dy = dots[i].y - dots[j].y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 120) {
-              ctx.beginPath();
-              ctx.moveTo(dots[i].x, dots[i].y);
-              ctx.lineTo(dots[j].x, dots[j].y);
-              ctx.strokeStyle = `rgba(99,179,237,${0.07 * (1 - dist / 120)})`;
-              ctx.lineWidth = 0.7;
-              ctx.stroke();
-            }
-          }
-        }
-        requestAnimationFrame(draw);
-      }
-      draw();
-    })();
 
     /* ── Typing effect ── */
     const phrases = [
       'Desarrollador de Aplicaciones',
       'Técnico en Sistemas y Redes',
       'Backend Developer · Java & Spring',
-      'Frontend Developer · React & Angular',
+      'Full Stack Developer · React & Spring Boot',
     ];
     let pi = 0, ci = 0, deleting = false;
     const typedEl = document.getElementById('typed');
