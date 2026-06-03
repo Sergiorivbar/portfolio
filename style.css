@@ -621,6 +621,17 @@ nav.scrolled {
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(245,158,11,0.12);
 }
+.btn-cv {
+  background: transparent;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+}
+.btn-cv:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(255,255,255,0.08);
+}
 
 /* Scroll hint */
 .scroll-hint {
